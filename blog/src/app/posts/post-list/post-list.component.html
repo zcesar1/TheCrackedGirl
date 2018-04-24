@@ -1,0 +1,67 @@
+<mat-sidenav-container style="background-color: white;">
+  <!-- container for sidenav and content-->
+  <mat-sidenav class="sidecont" #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')"
+    position="end">
+    <button type="button" mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>
+        <i class="material-icons">close</i>
+      </mat-icon>
+    </button>
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <mat-divider></mat-divider>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+    <mat-divider></mat-divider>
+    <a routerLink="/work" routerLinkActive="active">Work</a>
+  </mat-sidenav>
+  <!--side content-->
+  <mat-sidenav-content>
+    <!-- main content-->
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="logo">
+          <a style="font-size: 25px;" routerLink="/home">ZoDesigns</a>
+        </div>
+        <nav>
+          <ul class="nav-list">
+            <!-- <li>
+              <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
+                <button mat-button routerLink="/dashboard">Create Post</button>
+                <button mat-button (click)="auth.logout()">Logout</button>
+              </div>
+              <ng-template #showLogin>
+                <button mat-button (click)="auth.login()">Login with Google</button>
+              </ng-template>
+            </li>-->
+            <li>menu</li>
+            <li>
+              <button type="button" mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>
+                  <i class="material-icons">menu</i>
+                </mat-icon>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <section class="blogposts">
+      <mat-card class="example-card" *ngFor="let post of posts | async">
+        <img mat-card-image class="image" src="{{post.image}}" alt="{{post.title}}">
+        <mat-card-content>
+          <h2>{{post.title}}</h2>
+          <p>{{post.postsummary}}</p>
+          <p>
+            <small>Posted by {{post.author}} &bull; on {{post.published | date: "fullDate"}}</small>
+          </p>
+        </mat-card-content>
+        <mat-card-actions align="end" *ngIf="auth.currentUserId === post.authorID">
+          <button mat-icon-button (click)="delete(post.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-card-actions>
+        <mat-card-actions>
+          <button mat-raised-button routerLink="{{post.id}}">Read More</button>
+        </mat-card-actions>
+      </mat-card>
+    </section>
+  </mat-sidenav-content>

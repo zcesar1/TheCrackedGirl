@@ -1,0 +1,50 @@
+<mat-sidenav-container style="background-color: white;">
+    <!-- container for sidenav and content-->
+    <mat-sidenav class="sidecont" #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')"
+        position="end">
+        <button type="button" mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>
+                <i class="material-icons">close</i>
+            </mat-icon>
+        </button>
+        <a routerLink="/home" routerLinkActive="active">Home</a>
+        <mat-divider></mat-divider>
+        <a routerLink="/work" routerLinkActive="active">Work</a>
+        <mat-divider></mat-divider>
+        <a routerLink="/blog" routerLinkActive="active">Blog</a>
+    </mat-sidenav>
+    <!--side content-->
+    <mat-sidenav-content>
+        <!-- main content-->
+        <section class="navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <a style="font-size: 25px;" routerLink="">ZoDesigns</a>
+                </div>
+                <nav>
+                    <ul class="nav-list">
+                        <li>menu</li>
+                        <li>
+                            <button type="button" mat-icon-button (click)="sidenav.toggle()">
+                                <mat-icon>
+                                    <i class="material-icons">menu</i>
+                                </mat-icon>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="image">
+                <img src="/assets/imgs/michael-carnevale-435126.jpg">
+            </div>
+            <div class="text">
+                <h1>About Me</h1>
+                <p>I am a lifelong learner. I love learning about areas in my field, such as web dev and artificial intelligence.
+                    I have a passion for all things arts, whether that be photography, videography, motion graphics, or music.
+                    Check out some of my work and read my blog to learn more about me.
+                </p>
+            </div>
+        </div>

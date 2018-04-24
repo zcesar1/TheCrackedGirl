@@ -1,0 +1,26 @@
+<section class="navigation">
+  <div class="nav-container">
+      <div class="logo">
+          <a style="font-size: 25px;">ZoDesigns</a>
+      </div>
+      <nav>
+          <ul class="nav-list">
+             <li>
+                  <button type="button" mat-icon-button (click)="sidenav.toggle()">
+                      <mat-icon><i class="material-icons">menu</i></mat-icon>
+                  </button>
+              </li>
+              <li><mat-icon><i class="material-icons">search</i></mat-icon></li>
+              <li>
+                    <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
+                            <button mat-raised-button color="accent">Upload Photos</button>
+                            <button mat-button (click)="auth.logout()">Logout</button>
+                    </div>
+                    <ng-template #showLogin>
+                        <button mat-button (click)="auth.login()">Login with Google</button>
+                    </ng-template>
+              </li>
+            </ul>
+      </nav>
+  </div>
+</section>

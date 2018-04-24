@@ -1,0 +1,51 @@
+<mat-sidenav-container style="background-color: white;">
+    <!-- container for sidenav and content-->
+    <mat-sidenav class="sidecont" #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')"
+        position="end">
+        <button type="button" mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>
+                <i class="material-icons">close</i>
+            </mat-icon>
+        </button>
+        <a routerLink="/home" routerLinkActive="active">Home</a>
+        <mat-divider></mat-divider>
+        <a routerLink="/about" routerLinkActive="active">About</a>
+        <mat-divider></mat-divider>
+        <a routerLink="/blog" routerLinkActive="active">Blog</a>
+    </mat-sidenav>
+    <!--side content-->
+    <mat-sidenav-content>
+        <!-- main content-->
+        <section class="navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <a style="font-size: 25px;" routerLink="/home">ZoDesigns</a>
+                </div>
+                <nav>
+                    <ul class="nav-list">
+                        <!--<li>
+                            <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
+                                <button mat-button routerLink="/workdashboard">Upload Photo</button>
+                                <button mat-button (click)="auth.logout()">Logout</button>
+                            </div>
+                            <ng-template #showLogin>
+                                <button mat-button (click)="auth.login()">Login with Google</button>
+                            </ng-template>
+                        </li>-->
+                        <li>menu</li>
+                        <li>
+                            <button type="button" mat-icon-button (click)="sidenav.toggle()">
+                                <mat-icon>
+                                    <i class="material-icons">menu</i>
+                                </mat-icon>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <div class="images">
+            <img mat-card-image *ngFor="let portfolio of portfolios | async" src="{{portfolio.image}}" alt="{{portfolio.title}}">
+        </div>
+    </mat-sidenav-content>
+    <!--routerLink="{{portfolio.id}}"-->

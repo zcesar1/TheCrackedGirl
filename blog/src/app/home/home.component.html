@@ -1,0 +1,66 @@
+<mat-sidenav-container style="background-color: white;">
+    <!-- container for sidenav and content-->
+    <mat-sidenav class="sidecont" #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')"
+        position="end">
+        <button type="button" mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>
+                <i class="material-icons">close</i>
+            </mat-icon>
+        </button>
+        <a routerLink="/about" routerLinkActive="active">About</a>
+        <mat-divider></mat-divider>
+        <a routerLink="/work" routerLinkActive="active">Work</a>
+        <mat-divider></mat-divider>
+        <a routerLink="/blog" routerLinkActive="active">Blog</a>
+    </mat-sidenav>
+    <!--side content-->
+    <mat-sidenav-content>
+        <!-- main content-->
+        <section class="navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <a style="font-size: 25px;" routerLink="">ZoDesigns</a>
+                </div>
+                <nav>
+                    <ul class="nav-list">
+                        <li>menu</li>
+                        <li>
+                            <button type="button" mat-icon-button (click)="sidenav.toggle()">
+                                <mat-icon>
+                                    <i class="material-icons">menu</i>
+                                </mat-icon>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <div class="container">
+            <div class="image">
+                <img src="/assets/imgs/sunflowers.jpg">
+            </div>
+            <div class="text">
+                <h1>Hello, </h1>
+                <p>My name is Zoe Cesar. I am a photographer, videographer, and computer scientist just living life.
+                </p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <footer>
+            <a href="https://www.linkedin.com/in/zoecesar/" target="_blank" class="fab fa-linkedin"></a>
+            <a href="https://www.youtube.com/channel/UCjVYvF-2Ha5PKV-ONoeZwiQ/videos" target="_blank" class="fab fa-youtube"></a>
+            <a href="https://www.instagram.com/zoe.cesar.9/" target="_blank" class="fab fa-instagram"></a>
+            <a href="https://vimeo.com/zoecesar" target="_blank" class="fab fa-vimeo-v"></a>
+            <a href="https://github.com/zcesar1" target="_blank" class="fab fa-github-alt"></a>
+        </footer>
+    </mat-sidenav-content>
+</mat-sidenav-container>

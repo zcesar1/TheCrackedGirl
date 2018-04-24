@@ -1,0 +1,23 @@
+<section>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Upload an Image</mat-panel-title>
+      </mat-expansion-panel-header>
+      <div>
+        <input type="file" name="file" id="file" (change)="uploadImage($event)">
+        <div [hidden]="!uploadPercent">
+          <mat-progress-bar mode="determinate" value="{{uploadPercent | async}}"></mat-progress-bar>
+        </div>
+        <div [hidden]="!image">
+          <img [src] = "image || '//:0'">
+        </div>
+      </div>
+      <mat-form-field>
+          <input matInput placeholder="Image Title" [(ngModel)] = "title">
+        </mat-form-field><br>
+        <br>
+      <button mat-raised-button color="accent" (click) = "openDialog()" [disabled] = "!title||!image">Upload Image</button>
+    </mat-expansion-panel>
+  </mat-accordion>
+</section>

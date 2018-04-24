@@ -1,0 +1,19 @@
+<div class="container">
+  <a routerLink="/home" routerLinkActive="active">Admin Page</a>
+  <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
+    <div class="logout">
+      <button mat-button (click)="auth.logout()">Logout</button> 
+    </div>
+    <mat-tab-group>
+      <mat-tab label="Create a Post">
+        <button mat-button routerLink="/dashboard">Create Post</button>
+      </mat-tab>
+      <mat-tab label="Upload a Photo">
+        <button mat-button routerLink="/workdashboard">Upload Photo</button>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+  <ng-template #showLogin>
+    <button mat-button (click)="auth.login()">Login with Google</button>
+  </ng-template>
+</div>

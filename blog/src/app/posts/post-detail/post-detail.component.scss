@@ -1,0 +1,143 @@
+/*For the navbar*/
+$content-width: 1000px;
+$breakpoint: 799px;
+$nav-height: 70px;
+$nav-background: #ffffff;
+$nav-font-color: #000000;
+$link-hover-color: #E8E8E8;
+
+.navigation
+{
+    height: $nav-height;
+    background: $nav-background;
+}
+.nav-container
+{
+    max-width: $content-width;
+    margin: 0 auto;
+}
+
+.logo
+{
+    position: absolute;
+    float: left;
+    line-height: $nav-height;
+    font-family: "Helvetica Neue";
+    font-weight: 700;
+    a,
+    a:visited {
+        color: $nav-font-color;
+        text-decoration: none;
+    }
+}
+
+nav {
+        float: right;
+    ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Regular;
+      li {  
+            float: left;
+            position: relative;
+            display: block;
+            padding: 0 5px;
+            line-height: $nav-height;
+            background: $nav-background;
+            color: $nav-font-color;
+        a {
+            text-decoration: none;
+            color: $nav-font-color;
+          &:hover {
+            background: $link-hover-color;
+            color: $nav-font-color;
+          }
+        } 
+      }
+    }
+  }
+
+  /*for the sidenav*/
+  .sidecont
+  {
+      a
+      {
+        margin-top: 90px;
+        margin-right: 70px;
+        margin-left: 70px;
+        display: block;
+        text-decoration: none;
+        color: $nav-font-color;
+        &:hover {
+            color: rgb(132, 215, 230);
+          }
+      }
+      mat-divider
+      {
+          margin: 40px;
+      }
+  }
+
+.postContent 
+{
+    /* make colums of the text for overflow*/
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-width: 50px; /* Chrome, Safari, Opera */
+    -moz-column-width: 50px; /* Firefox */
+    column-width: 50px;
+    margin: 20px;
+}
+
+.form
+{
+    max-width: 700px;
+    margin: 2em auto;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+p
+{
+    font-family: 'Segoe UI', Semibold;
+}
+
+.imagewithText 
+{ 
+    position: relative; 
+    width: 100%; /* for IE 6 */
+
+    img
+    {
+        width: 75%;
+    }
+
+    h3 { 
+        position: absolute; 
+        top: 200px; 
+        left: 40px; 
+        width: 100%; 
+        font-family: "Helvetica Neue";
+        font-weight: 800;
+        font-size: 60px;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+     }
+
+     /*.blogsubtitle
+     {
+        position: absolute; 
+        top: 300px; 
+        left: 40px; 
+        width: 100%; 
+        font-family: 'Arctic';
+        font-size: 30px;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+     }*/
+ }
+ 
