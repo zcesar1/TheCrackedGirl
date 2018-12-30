@@ -1,6 +1,45 @@
-<mat-sidenav-container style="background-color: white;">
+<section id="cover">
+    <div id="cover-caption">
+        <div class="container">
+            <div class="words">
+                <h1 class="display-3 text-center">Hello World!</h1>
+                <p class="text-center">I am Zoe (with 2 dots above the e). I love to play the piano, cook, code, and
+                    film movies. I am proficient
+                    in Spanish and Java. I also have an elementary knowledge of HTML and CSS. I am pursuing a
+                    Bachelor's
+                    degree in Computer Science, and will hopefully get a Master's degree in Animation or Digital
+                    Media.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about">
+    <div class="section-content">
+        <div class="container">
+            <div class="col-md-6">
+                <div class="about-text">
+                    <h3>About me</h3>
+                    <p class="lead">I am a lifelong learner. I love learning about areas in my field, such as web dev
+                        and artificial
+                        intelligence. I have a passion for all things arts, whether that be photography, videography,
+                        motion graphics, or music. Check out some of my work and read my blog to learn more about me.</p>
+
+                    <h5 style="font-family: Segoe Ui, Semibold;">Social Media Links</h5>
+                    <a href="https://www.linkedin.com/in/zoecesar/" target="_blank" class="fab fa-linkedin"></a>
+                    <a href="https://www.youtube.com/channel/UCjVYvF-2Ha5PKV-ONoeZwiQ/videos" target="_blank" class="fab fa-youtube"></a>
+                    <a href="https://www.instagram.com/zcesar1/" target="_blank" class="fab fa-instagram"></a>
+                    <a href="https://vimeo.com/zoecesar" target="_blank" class="fab fa-vimeo-v"></a>
+                    <a href="https://github.com/zcesar1" target="_blank" class="fab fa-github-alt"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <mat-sidenav-container>-->
     <!-- container for sidenav and content-->
-    <mat-sidenav class="sidecont" #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')"
+    <!-- <mat-sidenav class="sidecont" #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')"
         position="end">
         <button type="button" mat-icon-button (click)="sidenav.toggle()">
             <mat-icon>
@@ -12,11 +51,11 @@
         <a routerLink="/work" routerLinkActive="active">Work</a>
         <mat-divider></mat-divider>
         <a routerLink="/blog" routerLinkActive="active">Blog</a>
-    </mat-sidenav>
+    </mat-sidenav>-->
     <!--side content-->
-    <mat-sidenav-content>
+    <!-- <mat-sidenav-content style="margin: 0px; padding: 0px;">-->
         <!-- main content-->
-        <section class="navigation">
+        <!-- <section class="navigation">
             <div class="nav-container">
                 <div class="logo">
                     <a style="font-size: 25px;" routerLink="">ZoDesigns</a>
@@ -35,32 +74,38 @@
                 </nav>
             </div>
         </section>
-        <div class="container">
-            <div class="image">
-                <img src="/assets/imgs/sunflowers.jpg">
+        <section class="header">
+            <div class="cover">
+                <img src="/assets/imgs/sunflowers.jpg" class="img-fluid" alt="Sunflowers">
+                <div class="center">
+                    <h1 class="text-center">Hello World!</h1>
+                    <p class="text-center">I'm just a girl from Atlanta with way too many hobbies.</p>
+                </div>
             </div>
-            <div class="text">
-                <h1>Hello, </h1>
-                <p>My name is Zoe Cesar. I am a photographer, videographer, and computer scientist just living life.
-                </p>
+        </section>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="image">
+                        <img src="/assets/imgs/sunflowers.jpg">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text">
+                        <h1>Hello, </h1>
+                        <p>My name is Zoe Cesar. I am a photographer, videographer, and computer scientist just living life.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <footer>
             <a href="https://www.linkedin.com/in/zoecesar/" target="_blank" class="fab fa-linkedin"></a>
             <a href="https://www.youtube.com/channel/UCjVYvF-2Ha5PKV-ONoeZwiQ/videos" target="_blank" class="fab fa-youtube"></a>
-            <a href="https://www.instagram.com/zoe.cesar.9/" target="_blank" class="fab fa-instagram"></a>
+            <a href="https://www.instagram.com/zcesar1/" target="_blank" class="fab fa-instagram"></a>
             <a href="https://vimeo.com/zoecesar" target="_blank" class="fab fa-vimeo-v"></a>
             <a href="https://github.com/zcesar1" target="_blank" class="fab fa-github-alt"></a>
         </footer>
     </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container>-->

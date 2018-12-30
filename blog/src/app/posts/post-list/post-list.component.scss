@@ -81,12 +81,14 @@ nav {
 
 .blogposts
 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: auto;
-    grid-gap: 10px;
-    margin: 0 auto;
-    max-width: 95%;
+    //display: grid;
+    //grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    //grid-template-rows: auto;
+    //grid-gap: 10px;
+    //margin: 0 auto;
+    //max-width: 95%;
+
+    margin: 10px;
 
     h2
     {
@@ -98,5 +100,16 @@ nav {
     {
         font-family: 'Segoe UI', Semibold;
     }
+}
+
+.read{
+    a
+     {
+       text-decoration: none;
+       color: $nav-font-color;
+       &:hover {
+           color: rgb(132, 215, 230);
+         }
+     }
 }
 

@@ -1,6 +1,43 @@
-<mat-sidenav-container style="background-color: white;">
-  <!-- container for sidenav and content-->
-  <mat-sidenav class="sidecont" #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')"
+<section class="blogposts">
+  <div class="title border-top">
+    <div style="margin-top: 30px; margin-bottom: 30px">
+      <h1 class="d-flex justify-content-center">The Cracked Girl</h1>
+      <p class="d-flex justify-content-center"><em>
+          Because every blog needs a fancy title.
+        </em>
+      </p>
+    </div>
+  </div>
+  <div class="card-columns">
+    <div class="card border-top-0 border-right-0 border-left-0" *ngFor="let post of posts | async">
+      <img src="{{post.image}}" alt="{{post.title}}" class="card-img-top">
+      <div class="card-body">
+        <h2 class="card-title">{{post.title}}</h2>
+        <p class="card-text">{{post.postsummary}}</p>
+
+        <div class="read">
+          <a class="card-text" routerLink="{{post.id}}">
+            Read More
+          </a>
+        </div>
+      </div>
+      <div class="card-footer border-top-0 border-bottom-0 bg-transparent text-muted">
+        <p>
+          <small>Posted by {{post.author}} &bull; on {{post.published | date: "fullDate"}}</small>
+        </p>
+        <div class="text-right" *ngIf="auth.currentUserId === post.authorID">
+          <button mat-icon-button (click)="delete(post.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--<mat-sidenav-container style="background-color: white;">-->
+<!-- container for sidenav and content-->
+<!--<mat-sidenav class="sidecont" #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')"
     position="end">
     <button type="button" mat-icon-button (click)="sidenav.toggle()">
       <mat-icon>
@@ -12,18 +49,18 @@
     <a routerLink="/about" routerLinkActive="active">About</a>
     <mat-divider></mat-divider>
     <a routerLink="/work" routerLinkActive="active">Work</a>
-  </mat-sidenav>
-  <!--side content-->
-  <mat-sidenav-content>
-    <!-- main content-->
-    <section class="navigation">
+  </mat-sidenav>-->
+<!--side content-->
+<!--<mat-sidenav-content>-->
+<!-- main content-->
+<!--<section class="navigation">
       <div class="nav-container">
         <div class="logo">
           <a style="font-size: 25px;" routerLink="/home">ZoDesigns</a>
         </div>
         <nav>
-          <ul class="nav-list">
-            <!-- <li>
+          <ul class="nav-list">-->
+<!-- <li>
               <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
                 <button mat-button routerLink="/dashboard">Create Post</button>
                 <button mat-button (click)="auth.logout()">Logout</button>
@@ -32,7 +69,7 @@
                 <button mat-button (click)="auth.login()">Login with Google</button>
               </ng-template>
             </li>-->
-            <li>menu</li>
+<!--<li>menu</li>
             <li>
               <button type="button" mat-icon-button (click)="sidenav.toggle()">
                 <mat-icon>
@@ -45,7 +82,33 @@
       </div>
     </section>
     <section class="blogposts">
-      <mat-card class="example-card" *ngFor="let post of posts | async">
+      <div class="card-columns">
+        <div class="card border-top-0 border-right-0 border-left-0" *ngFor="let post of posts | async">
+          <img src="{{post.image}}" alt="{{post.title}}" class="card-img-top">
+          <div class="card-body">
+            <h2 class="card-title">{{post.title}}</h2>
+            <p class="card-text">{{post.postsummary}}</p>
+
+            <div class="card text-right" *ngIf="auth.currentUserId === post.authorID">
+              <button mat-icon-button (click)="delete(post.id)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+
+            <div class="read">
+              <a class="card-text" routerLink="{{post.id}}">
+                Read More
+              </a>
+            </div>
+          </div>
+          <div class="card-footer border-top-0 border-bottom-0 bg-transparent text-muted">
+            <p>
+              <small>Posted by {{post.author}} &bull; on {{post.published | date: "fullDate"}}</small>
+            </p>
+          </div>
+        </div>
+      </div>-->
+<!-- <mat-card class="example-card" *ngFor="let post of posts | async">
         <img mat-card-image class="image" src="{{post.image}}" alt="{{post.title}}">
         <mat-card-content>
           <h2>{{post.title}}</h2>
@@ -62,6 +125,6 @@
         <mat-card-actions>
           <button mat-raised-button routerLink="{{post.id}}">Read More</button>
         </mat-card-actions>
-      </mat-card>
-    </section>
-  </mat-sidenav-content>
+      </mat-card>-->
+<!--</section>
+  </mat-sidenav-content>-->

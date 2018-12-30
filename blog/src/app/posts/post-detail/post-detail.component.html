@@ -1,6 +1,51 @@
-<mat-sidenav-container style="background-color: white;">
-    <!-- container for sidenav and content-->
-    <mat-sidenav class="sidecont" #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')"
+<div class="title border-top" style="margin-top: 20px; margin-bottom: 30px;">
+</div>
+<ng-container *ngIf="post">
+    <div class="form" [hidden]="!editing">
+        <mat-card>
+            <h2>Update Post</h2>
+            <mat-form-field>
+                <input matInput placeholder="Post Title" [(ngModel)]="post.title">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <textarea matInput placeholder="Post Description" [(ngModel)]="post.postsummary" rows="5"></textarea>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <textarea matInput placeholder="Post Content" [(ngModel)]="post.postcontent" rows="10"></textarea>
+            </mat-form-field>
+            <br>
+            <button mat-raised-button color="accent" (click)="openDialog()">Save</button>
+            <button mat-button (click)="editing=false">Cancel</button>
+        </mat-card>
+    </div>
+    <div [hidden]="editing">
+        <div class="postsettings">
+            <h3 class="text-center display-4" style="font-family: Helvetica Neue;">{{post.title}}</h3>
+            <img src="{{post.image}}" alt="{{post.title}}" class="img-fluid mx-auto d-block" style="width: 90%;">
+            <div class="postContent">
+                <p>{{post.postcontent}}</p>
+            </div>
+            <span style="float:right;" *ngIf="auth.currentUserId === post.authorID">
+                <button mat-icon-button (click)="editing=true">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </span>
+            <span style="float:right;" *ngIf="auth.currentUserId === post.authorID">
+                <button mat-icon-button (click)="delete()">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </span>
+        </div>
+    </div>
+</ng-container>
+
+
+
+<!--<mat-sidenav-container style="background-color: white;">-->
+<!-- container for sidenav and content-->
+<!--<mat-sidenav class="sidecont" #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')"
         position="end">
         <button type="button" mat-icon-button (click)="sidenav.toggle()">
             <mat-icon>
@@ -12,11 +57,11 @@
         <a routerLink="/about" routerLinkActive="active">About</a>
         <mat-divider></mat-divider>
         <a routerLink="/work" routerLinkActive="active">Work</a>
-    </mat-sidenav>
-    <!--side content-->
-    <mat-sidenav-content>
-        <!-- main content-->
-        <section class="navigation">
+    </mat-sidenav>-->
+<!--side content-->
+<!--<mat-sidenav-content>-->
+<!-- main content-->
+<!--<section class="navigation">
             <div class="nav-container">
                 <div class="logo">
                     <a style="font-size: 25px;" routerLink="/blog">ZoDesigns</a>
@@ -44,7 +89,7 @@
                     </mat-form-field>
                     <br>
                     <mat-form-field>
-                      <textarea matInput placeholder="Post Description" [(ngModel)]="post.postsummary" rows="5"></textarea>
+                        <textarea matInput placeholder="Post Description" [(ngModel)]="post.postsummary" rows="5"></textarea>
                     </mat-form-field>
                     <br>
                     <mat-form-field>
@@ -57,12 +102,14 @@
             </div>
             <div [hidden]="editing">
                 <div class="postsettings">
-                    <div class="imagewithText">
+                    <h3 class="text-center display-4" style="font-family: Helvetica Neue;">{{post.title}}</h3>
+                    <img src="{{post.image}}" alt="{{post.title}}" class="img-fluid mx-auto d-block" style="width: 90%;">-->
+<!--<div class="imagewithText">
                         <img src="{{post.image}}" alt="{{post.title}}">
-                        <h3>{{post.title}}</h3>
-                        <!--<p class="blogsubtitle">posted by {{post.author}} &bull; {{post.published | date: "fullDate"}}</p>-->
-                    </div>
-                    <div class="postContent">
+                        <h3>{{post.title}}</h3>-->
+<!--<p class="blogsubtitle">posted by {{post.author}} &bull; {{post.published | date: "fullDate"}}</p>-->
+<!--</div>-->
+<!--<div class="postContent">
                         <p>{{post.postcontent}}</p>
                     </div>
                     <span style="float:right;" *ngIf="auth.currentUserId === post.authorID">
@@ -71,12 +118,12 @@
                         </button>
                     </span>
                     <span style="float:right;" *ngIf="auth.currentUserId === post.authorID">
-                        <button mat-icon-button (click)="delete()">
-                            <!-- don't need post.id because we're getting it from the route-->
-                            <mat-icon>delete</mat-icon>
+                        <button mat-icon-button (click)="delete()">-->
+<!-- don't need post.id because we're getting it from the route-->
+<!--<mat-icon>delete</mat-icon>
                         </button>
                     </span>
                 </div>
             </div>
         </ng-container>
-    </mat-sidenav-content>
+    </mat-sidenav-content>-->

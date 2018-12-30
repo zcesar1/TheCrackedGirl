@@ -1,6 +1,26 @@
-<mat-sidenav-container style="background-color: white;">
-    <!-- container for sidenav and content-->
-    <mat-sidenav class="sidecont" #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')"
+<div class="container-fluid">
+    <div class="row">
+        <div class="col align-self-center">
+            <div class="image">
+                <img src="/assets/imgs/website-profile-pic.jpg">
+            </div>
+        </div>
+        <div class="col">
+            <div class="text">
+                <h1>About Me</h1>
+                <p>
+                    I am a programmer with a Bachelor's Degree in Computer Science. I love all things media and am always
+                    staying up to date with the latest technologies. I am constantly trying new things and expanding my skillset.
+                    I have a passion for video production and photography and pursue those activities on the side. 
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<mat-sidenav-container style="background-color: white;">-->
+<!-- container for sidenav and content-->
+<!--<mat-sidenav class="sidecont" #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')"
         position="end">
         <button type="button" mat-icon-button (click)="sidenav.toggle()">
             <mat-icon>
@@ -12,11 +32,11 @@
         <a routerLink="/work" routerLinkActive="active">Work</a>
         <mat-divider></mat-divider>
         <a routerLink="/blog" routerLinkActive="active">Blog</a>
-    </mat-sidenav>
-    <!--side content-->
-    <mat-sidenav-content>
-        <!-- main content-->
-        <section class="navigation">
+    </mat-sidenav>-->
+<!--side content-->
+<!--<mat-sidenav-content>-->
+<!-- main content-->
+<!--<section class="navigation">
             <div class="nav-container">
                 <div class="logo">
                     <a style="font-size: 25px;" routerLink="">ZoDesigns</a>
@@ -36,15 +56,23 @@
             </div>
         </section>
 
-        <div class="container">
-            <div class="image">
-                <img src="/assets/imgs/michael-carnevale-435126.jpg">
-            </div>
-            <div class="text">
-                <h1>About Me</h1>
-                <p>I am a lifelong learner. I love learning about areas in my field, such as web dev and artificial intelligence.
-                    I have a passion for all things arts, whether that be photography, videography, motion graphics, or music.
-                    Check out some of my work and read my blog to learn more about me.
-                </p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="image">
+                        <img src="/assets/imgs/michael-carnevale-435126.jpg">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text">
+                        <h1>About Me</h1>
+                        <p>I am a lifelong learner. I love learning about areas in my field, such as web dev and artificial
+                            intelligence. I have a passion for all things arts, whether that be photography, videography,
+                            motion graphics, or music. Check out some of my work and read my blog to learn more about me.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>-->

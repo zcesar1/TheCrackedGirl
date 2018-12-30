@@ -1,0 +1,18 @@
+$nav-background: #ffffff;
+$nav-font-color: black;
+$link-hover-color: #E8E8E8;
+
+.navbar-brand{
+    font-family: "Helvetica Neue";
+    font-weight: 700;   
+}
+
+.navbar-nav{
+    a{
+        font-family: 'Segoe UI', Regular;
+        &:hover {
+            background: $link-hover-color;
+            color: $nav-font-color;
+          }
+    }
+}

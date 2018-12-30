@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from './core/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent{
   //public isCollapsed = false;
+  constructor(public auth: AuthService) { }
 }

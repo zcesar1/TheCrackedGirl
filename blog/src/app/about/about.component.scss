@@ -6,22 +6,20 @@
 /*for the image*/
 .image
 {
-    float: left;
-    max-width: 100%;
-    padding-right: 145px;
-    padding-left: 50px;
-    img
-    {
-        width: 400px;
-        height: 600px;
+    //float: left;
+    //max-width: 100%;
+    //padding-right: 145px;
+    //padding-left: 50px;
+    img{
+        max-width: 100%;
     }
 }
 .text
 {
-    text-align: left;
+    margin-right: 50px;
     h1
     {
-        font-size: 85px;
+        font-size: 75px;
     }
 
     p

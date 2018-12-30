@@ -1,10 +1,74 @@
-.container
+img{
+max-width: 100%;
+}
+/*cover*/
+
+#cover{
+background-color: white; // #222  url("/assets/imgs/sunflowers.jpg")  no-repeat;
+background-size: cover;
+color: black;
+height: 100%;
+display: flex;
+}
+
+.words{
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+
+#cover-caption{
+width: 100%;
+}
+
+.section-content{
+padding: 5rem 0;
+}
+
+#about{
+background: url("/assets/imgs/michael-carnevale-435126.jpg") center center no-repeat;
+background-size: cover;
+}
+
+.about-text{
+background: rgba(0,0,0,0.8);
+color: white;
+padding: 1.875rem;
+}
+
+#footer-main{
+background: #222;
+color: white;
+font-size: 0.8rem;
+//padding: 2.5rem;
+background-size: cover;
+margin: 0;
+}
+
+/*.container
 {
     margin: 0%;
     padding: 0%;
-}
+}*/
+  
+
+/*.cover {
+    position: relative;
+  }
+  
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 56px;
+  }
+  
+  img { 
+    width: 100%;
+    height: auto;
+  }*/
 /*for the image*/
-.image
+/*.image
 {
     float: left;
     max-width: 100%;
@@ -28,14 +92,14 @@
     {
         font-size: 40px;
     }
-}
+}*/
 
 /*For the navbar*/
 $content-width: 1000px;
 $breakpoint: 799px;
 $nav-height: 70px;
 $nav-background: #ffffff;
-$nav-font-color: #000000;
+$nav-font-color: black;
 $link-hover-color: #E8E8E8;
 
 .navigation

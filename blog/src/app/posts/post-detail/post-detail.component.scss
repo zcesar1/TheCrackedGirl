@@ -82,13 +82,17 @@ nav {
 .postContent 
 {
     /* make colums of the text for overflow*/
-    -webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
-    -webkit-column-width: 50px; /* Chrome, Safari, Opera */
-    -moz-column-width: 50px; /* Firefox */
-    column-width: 50px;
-    margin: 20px;
+    //-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    //-moz-column-count: 2; /* Firefox */
+    //column-count: 2;
+    //-webkit-column-width: 50px; /* Chrome, Safari, Opera */
+    //-moz-column-width: 50px; /* Firefox */
+    //column-width: 50px;
+    //margin: 20px;
+    margin-top: 20px; 
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: 'Segoe UI', Semibold;
 }
 
 .form
@@ -104,6 +108,11 @@ mat-form-field{
 p
 {
     font-family: 'Segoe UI', Semibold;
+}
+
+.blog-header{
+    h3 { 
+     }
 }
 
 .imagewithText 
