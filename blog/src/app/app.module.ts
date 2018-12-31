@@ -16,7 +16,6 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { Nav2Component } from './nav2/nav2.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { PostsModule } from './posts/posts.module';
@@ -35,7 +34,6 @@ const routes: Routes =[
     AppComponent,
     HomeComponent,
     AboutComponent,
-    Nav2Component,
     AdminComponent
   ],
   imports: [

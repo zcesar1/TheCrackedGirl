@@ -15,15 +15,7 @@
       "es2017",
       "dom"
     ]
-  },
-  //for jqwidgets, delete later
-    "include": [
-        "src/**/*"
-      ],
-    "files": [
-      "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxbargauge.ts",//add typescript for each widget
-      "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxnavbar.ts"
-    ]
+  }
 }
 
 
